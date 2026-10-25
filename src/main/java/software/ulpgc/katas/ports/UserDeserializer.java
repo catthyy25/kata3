@@ -5,5 +5,5 @@ import software.ulpgc.katas.model.User;
 import java.util.List;
 
 public interface UserDeserializer {
-    List<User> deserializer(String value);
+    List<User> deserialize(String value);
 }
