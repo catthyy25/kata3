@@ -17,7 +17,7 @@ import java.net.http.HttpResponse;
 import java.util.List;
 
 public class Main {
-    public static void main(String args[]) throws URISyntaxException, IOException, InterruptedException {
+    public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
         try (HttpClient client = HttpClient.newHttpClient()){
             HttpRequest request = HttpRequest.newBuilder().uri(new URI("https://randomuser.me/api?results=10")).GET().build();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
